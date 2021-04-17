@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 
-import { deletFile } from "../../../utils/file";
-import { IUsersRepository } from "../repositories/IUsersRepository";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
+import { deletFile } from "@utils/file";
 
 interface IRequest {
     user_id: string;
