@@ -1,4 +1,3 @@
-import { query } from "express";
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class CreateRentals1620119770977 implements MigrationInterface {
@@ -24,6 +23,7 @@ export class CreateRentals1620119770977 implements MigrationInterface {
                     {
                         name: "end_date",
                         type: "timestamp",
+                        isNullable: true,
                     },
                     {
                         name: "expected_return_date",
@@ -32,9 +32,15 @@ export class CreateRentals1620119770977 implements MigrationInterface {
                     {
                         name: "total",
                         type: "numeric",
+                        isNullable: true,
                     },
                     {
                         name: "created_at",
+                        type: "timestamp",
+                        default: "now()",
+                    },
+                    {
+                        name: "updated_at",
                         type: "timestamp",
                         default: "now()",
                     },

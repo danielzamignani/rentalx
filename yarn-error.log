@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add nodemon -D
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add dayjs
 
 PATH: 
   C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Daniel\AppData\Local\Microsoft\WindowsApps;;C:\Users\Daniel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Daniel\AppData\Roaming\npm;C:\Users\Daniel\AppData\Local\Yarn\bin
@@ -25,7 +25,8 @@ npm manifest:
     "scripts": {
       "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
       "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
-      "test": "jest"
+      "test": "jest",
+      "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
     },
     "dependencies": {
       "bcryptjs": "^2.4.3",
