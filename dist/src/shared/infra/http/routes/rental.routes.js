@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.rentalRoutes = void 0;
+var express_1 = require("express");
+var CreateRentalController_1 = require("@modules/rentals/useCases/createRental/CreateRentalController");
+var ensureAuthenticated_1 = require("../middlewares/ensureAuthenticated");
+var rentalRoutes = express_1.Router();
+exports.rentalRoutes = rentalRoutes;
+var createRentalController = new CreateRentalController_1.CreateRentalController();
+rentalRoutes.post("/", ensureAuthenticated_1.ensureAuthenticated, createRentalController.handle);

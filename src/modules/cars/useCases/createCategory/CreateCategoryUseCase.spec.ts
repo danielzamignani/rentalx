@@ -36,17 +36,17 @@ describe("Create Category", () => {
         expect(async () => {
             const category = {
                 name: "Category Test",
-                descripton: "Category description test",
+                description: "Category description test",
             };
 
             await createCategoryUseCase.execute({
                 name: category.name,
-                description: category.descripton,
+                description: category.description,
             });
 
             await createCategoryUseCase.execute({
                 name: category.name,
-                description: category.descripton,
+                description: category.description,
             });
         }).rejects.toBeInstanceOf(AppError);
     });
