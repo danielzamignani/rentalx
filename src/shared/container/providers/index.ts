@@ -4,6 +4,6 @@ import { IDateProvider } from "./DateProvider/IDateProvider";
 import { DayjsDateProvider } from "./DateProvider/implementatios/DayjsDateProvider";
 
 container.registerSingleton<IDateProvider>(
-    "DayJsDateProvider",
+    "DayjsDateProvider",
     DayjsDateProvider
 );
