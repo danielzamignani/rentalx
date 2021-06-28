@@ -13,6 +13,7 @@
     "aws-sdk": "^2.932.0",
     "bcryptjs": "^2.4.3",
     "browserslist": "4.16.5",
+    "class-transformer": "^0.4.0",
     "csv-parse": "^4.15.3",
     "dayjs": "^1.10.4",
     "dotenv": "^10.0.0",
