@@ -1,2 +1,9 @@
 node_modules
+.env
+tmp/*
+coverage
+.vscode
+!tmp/.gitkeep
+dist
+ormconfig.json
 yarn-error.log
