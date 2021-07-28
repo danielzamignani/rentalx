@@ -4,7 +4,6 @@ on:
   push:
     branches: [ master ]
 
-
   workflow_dispatch:
 
 jobs:
@@ -33,4 +32,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }} 
           source: "., !node_modules"
-          target: "~/app/api-rentx"
+          target: "~/app/rentx"
